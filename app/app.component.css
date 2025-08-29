@@ -1,0 +1,91 @@
+  /* ================================ 
+  🎓 Main App Component Styles 
+  ================================== */
+
+  body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #3b4cca;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Navigation Button Styles */
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  nav button {
+    padding: 14px 25px;
+    margin: 8px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  nav button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d99);
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  nav button:focus {
+    outline: none;
+    border: 2px solid #ff9a8b;
+  }
+
+  /* Container Styles */
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Add a subtle gradient effect to body background */
+  body {
+    background: linear-gradient(135deg, #f4f6f9, #e8eff6);
+  }
+
+  /* Small screen responsiveness */
+  @media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    nav button {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+  }

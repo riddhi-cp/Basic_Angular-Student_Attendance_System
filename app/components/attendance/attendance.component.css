@@ -1,0 +1,149 @@
+/* ================================
+🎨 Colorful and Modern Attendance Container Styling
+================================== */
+
+/* 📅 Attendance Container with Gradient and Soft Shadows */
+.attendance-container {
+  background: linear-gradient(135deg, #e6f7ff, #f3e5f5); /* Pastel gradient */
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* 🎨 Hover effect on Attendance Container */
+.attendance-container:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* 📅 Date Picker (Updated Design) */
+#attendanceDate {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  border: 1px solid #d1e7dd; /* Light pastel border */
+  margin-top: 10px;
+  background: linear-gradient(135deg, #fbfbfc, #f3f5f5); /* Soft pastel gradient from light blue to pastel turquoise */
+  color: #444; /* Dark text for better contrast */
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1); /* Soft inner shadow for depth */
+  font-size: 16px;
+  font-weight: normal;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* 📅 Focus effect on Date Picker */
+#attendanceDate:focus {
+  background: linear-gradient(135deg, #f1e2b4, #e0f7fa); /* Pastel yellow and turquoise gradient */
+  border-color: #ff7f50; /* Focused border color */
+  color: #333; /* Darker text on focus for better readability */
+  box-shadow: inset 2px 2px 12px rgba(0, 0, 0, 0.1); /* Darker inner shadow */
+  outline: none; /* Remove the default blue outline */
+}
+
+/* 🌟 Table Styling with Soft Shadow and Rounded Corners */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* 🎨 Table Header with Gradient and Bold Text */
+th {
+  background: linear-gradient(135deg, #28a745, #7ac142); /* Green gradient */
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold; /* Bold text for headers */
+}
+
+/* 🌱 Table Row Hover Effect */
+tr:hover {
+  background-color: #f1f8f4; /* Light background on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* ✅ Present Button */
+.btn-success {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  background: #28a745; /* Green */
+  border: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* ✅ Hover effect on Present Button */
+.btn-success:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+/* ❌ Absent Button */
+.btn-danger {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  background: #e74c3c; /* Red */
+  border: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* ❌ Hover effect on Absent Button */
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+/* 📥 Submit Attendance Button */
+button.submit-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #3072be, #feb47b); /* Soft warm gradient */
+  color: white;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* Smooth transition */
+  margin-top: 20px;
+  border: none;
+}
+
+/* 📥 Hover effect on Submit Attendance Button */
+button.submit-btn:hover {
+  background: linear-gradient(45deg, #ff90b3, #d8a4ff); /* Slightly darker pastel pink and lavender */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .attendance-container {
+      padding: 20px;
+  }
+
+  .table {
+      margin-top: 15px;
+  }
+
+  th {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  button.submit-btn {
+      padding: 12px;
+      font-size: 14px;
+  }
+
+  .btn-success, .btn-danger {
+      padding: 8px 12px;
+  }
+}

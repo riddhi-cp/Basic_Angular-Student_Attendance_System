@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h1 class="text-center text-primary">🎓 Student Attendance System</h1>
+
+  <nav class="my-3 text-center">
+    <button class="btn btn-primary" (click)="showComponent('student-list')">
+      📚 Student List
+    </button>
+    <button class="btn btn-primary" (click)="showComponent('attendance')">
+      📅 Mark Attendance
+    </button>
+    <button class="btn btn-primary" (click)="showComponent('report')">
+      📊 Attendance Report
+    </button>
+  </nav>
+
+  <div *ngIf="currentComponent === 'student-list'">
+    <app-student-list></app-student-list>
+  </div>
+
+  <div *ngIf="currentComponent === 'attendance'">
+    <app-attendance></app-attendance>
+  </div>
+
+  <div *ngIf="currentComponent === 'report'">
+    <app-report></app-report>
+  </div>
+</div>

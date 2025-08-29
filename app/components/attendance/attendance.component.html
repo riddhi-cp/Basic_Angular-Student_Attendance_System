@@ -1,0 +1,70 @@
+<div class="container attendance-container">
+    <h2>📅 Mark Attendance</h2>
+  
+    <!-- Select Date for Attendance -->
+    <div class="mb-3">
+      <label for="attendanceDate" class="form-label"><h3>Select Date:</h3></label>
+      <input
+        type="date"
+        id="attendanceDate"
+        [(ngModel)]="selectedDate"
+        class="form-control"
+      />
+    </div>
+  
+    <!-- Attendance Table -->
+    <table class="table table-bordered mt-3" *ngIf="students.length > 0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Roll No</th>
+          <th>Attendance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.rollNo }}</td>
+          <td>
+            <button
+              class="btn"
+              [ngClass]="{
+                'btn-success': student.attendance === 'Present',
+                'btn-outline-success': student.attendance !== 'Present'
+              }"
+              (click)="markAttendance(i, 'Present')"
+            >
+              ✔️ Present
+            </button>
+            <button
+              class="btn"
+              [ngClass]="{
+                'btn-danger': student.attendance === 'Absent',
+                'btn-outline-danger': student.attendance !== 'Absent'
+              }"
+              (click)="markAttendance(i, 'Absent')"
+            >
+              ❌ Absent
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- No Students Available Message -->
+    <div *ngIf="students.length === 0" class="text-center text-muted mt-3">
+      No students available for attendance.
+    </div>
+  
+    <!-- Submit Button to Save Attendance -->
+    <button
+      class="btn btn-primary mt-3"
+      (click)="submitAttendance()"
+      [disabled]="!selectedDate"
+    >
+      Submit Attendance
+    </button>
+  </div>
+  

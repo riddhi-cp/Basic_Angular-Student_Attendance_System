@@ -1,0 +1,60 @@
+<div class="container report-container">
+    <h2>📊 Attendance Report</h2>
+  
+    <!-- Select Date for Report -->
+    <div class="mb-3">
+      <label for="reportDate" class="form-label"><h2>Select Date:</h2></label>
+      <input
+        type="date"
+        id="reportDate"
+        [(ngModel)]="selectedDate"
+        class="form-control"
+      />
+    </div>
+  
+    <!-- View Report Button -->
+    <button (click)="viewReport()" class="btn btn-primary mt-3">
+      View Report
+    </button>
+  
+    <!-- Show Report Table Only If Report is Visible -->
+    <div *ngIf="reportVisible" class="mt-4">
+      <table class="table table-bordered mt-3">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of studentReport; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.rollNo }}</td>
+            <td>
+              <span
+                *ngIf="student.attendance === 'Present'"
+                class="text-success"
+              >
+                ✅ Present
+              </span>
+              <span *ngIf="student.attendance === 'Absent'" class="text-danger">
+                ❌ Absent
+              </span>
+              <span *ngIf="!student.attendance" class="text-muted">
+                ⏳ Not Marked
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Export Report as PDF -->
+      <button (click)="exportReportAsPDF()" class="btn btn-success mt-3">
+        📥 Export as PDF
+      </button>
+    </div>
+  </div>
+  

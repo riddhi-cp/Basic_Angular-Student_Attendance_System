@@ -1,0 +1,137 @@
+/* 📊 Report Container */
+.report-container {
+  background: linear-gradient(135deg, #e6f7ff, #f3e5f5); /* Pastel gradient */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* 📅 Date Picker */
+#reportDate {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  margin-top: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* 📊 Report Table */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+/* 🎨 Table Header */
+th {
+  background: linear-gradient(90deg, #a5d6a7, #c5e1a5); /* Soft pastel green gradient */
+  color: #333;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 📥 Export PDF Button */
+.btn-export {
+  background-color: #80e27e; /* Pastel green */
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-export:hover {
+  background-color: #66bb6a;
+  transform: translateY(-3px);
+}
+
+/* 🟢 Hover effects for table rows */
+.table tr:hover {
+  background-color: #f1f8e9; /* Light pastel green hover */
+  cursor: pointer;
+}
+
+/* 🟠 Table cell styling */
+td {
+  padding: 14px;
+  font-size: 15px;
+  color: #333;
+  background-color: #ffffff;
+  text-align: left;
+  border-top: 1px solid #eee;
+}
+
+/* 🧑‍🎓 Avatar Circle Next to Name */
+.student-name-cell {
+  display: flex;
+  align-items: center;
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8bbd0; /* Soft pastel pink */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 14px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 Table Cell Hover */
+td:hover {
+  background-color: #fce4ec; /* Light pastel pink hover effect */
+}
+
+/* 📅 Date Picker Input Styling */
+#reportDate {
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#reportDate:focus {
+  background-color: #fff8e1; /* Pastel yellow on focus */
+  border-color: #f57f17;
+  outline: none;
+}
+
+/* 🎨 Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .report-container {
+    padding: 20px;
+  }
+
+  .btn-export {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+
+  #reportDate {
+    font-size: 14px;
+  }
+}

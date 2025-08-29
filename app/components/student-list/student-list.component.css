@@ -1,0 +1,168 @@
+
+/* 🌐 Global Body (if in component, use :host-context body) */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e6f7ff, #f3e5f5); /* Very soft pastel gradient for a light airy feel */
+  color: #333;
+}
+
+/* 🎓 Student List Container Enhancements */
+.student-list-container {
+  background: #ffffff; /* Keeping the container white for clarity */
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(135deg, #e6f7ff, #f3e5f5); /* Pastel gradient */
+}
+.student-list-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+}
+
+/* 📚 Responsive Table Wrapper */
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 50px 50px 0 0; /* Rounded top corners */
+}
+
+/* 📊 Table Styling Updates */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+ 
+}
+
+th {
+  background: linear-gradient(90deg, #a5d6a7, #c5e1a5); /* Soft pastel green gradient */
+  color: #2d3436;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: none;
+  
+}
+
+td {
+  background: #ffffff; /* Keeping cells white for clarity */
+  padding: 16px;
+  font-size: 15px;
+  color: #333;
+  vertical-align: middle;
+  border-top: none;
+}
+
+/* 🧑‍🎓 Avatar Circle Next to Name */
+.student-name-cell {
+  display: flex;
+  align-items: center;
+}
+.student-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #a2d5f2; /* Soft light blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌟 Row Hover and Ripple Effect */
+tr {
+  position: relative;
+  overflow: hidden;
+}
+tr:hover td {
+  background-color: #fff3e0; /* Light peach hover effect */
+}
+tr:active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  animation: ripple 0.6s ease-out;
+}
+@keyframes ripple {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* ➕ Add Student Section improved */
+.add-student {
+  background: linear-gradient(135deg, #d0c9e1, #fbc2eb); /* Light pastel gradient background */
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  margin-top: 40px;
+  transition: transform 0.3s;
+}
+.add-student:hover {
+  transform: translateY(-4px);
+}
+
+.add-student input {
+  padding: 16px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.8);
+  font-size: 15px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.add-student input:focus {
+  background: #fff;
+  border-color: #6c5ce7; /* Focused color */
+  outline: none;
+}
+
+/* 🟢 Add Student Button - Updated */
+.add-student button {
+  padding: 14px 22px;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #3072be, #feb47b); /* Soft warm gradient */
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease;
+}
+.add-student button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  background: linear-gradient(90deg, #90fafa, #ff7e5f); /* Reversed gradient for hover effect */
+}
+
+/* 🔍 Search Section */
+.search-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  gap: 20px;
+}
+.search-section input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #b2bec3;
+  font-size: 14px;
+  width: 250px;
+  transition: border-color 0.3s;
+}
+.search-section input:focus {
+  border-color: #6c5ce7; /* Focused border color */
+  outline: none;
+}
+

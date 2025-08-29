@@ -1,0 +1,62 @@
+<!-- Student List Component Template .html -->
+<div class="container student-list-container">
+  <h2>🎓 Student Attendance System</h2>
+
+  <!-- Search Bar -->
+  <div class="search-bar mt-3">
+    <input type="text" placeholder="Search by name or roll no" [(ngModel)]="searchQuery" class="form-control" />
+  </div>
+
+  <!-- Student List -->
+  <table class="table table-bordered mt-3" *ngIf="students.length > 0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students | filter:searchQuery; let i = index" 
+          (mouseover)="showPreview(student)" 
+          (mouseout)="hidePreview()">
+        <td>{{ i + 1 }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.rollNo }}</td>
+        <td>{{ student.class }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- No Students Available -->
+  <div *ngIf="students.length === 0" class="text-center text-muted mt-3">
+    No students available.
+  </div>
+
+  <!-- Clear All Students Button -->
+  <div *ngIf="students.length > 0" class="text-center mt-3">
+    <button class="btn btn-danger" (click)="clearAllStudents()">
+      🧹 Clear All Students
+    </button>
+  </div>
+
+  <!-- Student Profile Preview -->
+  <div *ngIf="previewStudent" class="student-preview mt-3">
+    <h4>Student Details:</h4>
+    <p><strong>Name:</strong> {{ previewStudent.name }}</p>
+    <p><strong>Roll No:</strong> {{ previewStudent.rollNo }}</p>
+    <p><strong>Class:</strong> {{ previewStudent.class }}</p>
+  </div>
+
+  <!-- Add/Edit Student Form -->
+  <div class="add-student mt-4">
+    <h2>{{ editingId === '' ? 'Add New Student' : 'Edit Student' }}</h2>
+    <input type="text" placeholder="Name" [(ngModel)]="newStudent.name" class="form-control mb-2" />
+    <input type="text" placeholder="Roll No" [(ngModel)]="newStudent.rollNo" class="form-control mb-2" />
+    <input type="text" placeholder="Class" [(ngModel)]="newStudent.class" class="form-control mb-2" />
+    <button class="btn btn-primary" (click)="addOrUpdateStudent()">
+      {{ editingId === '' ? '➕ Add Student' : '💾 Save Changes' }}
+    </button>
+  </div>
+</div>
